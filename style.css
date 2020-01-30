@@ -5,10 +5,18 @@ color:white;
 font-family:Helvetica,Arial;
 font-size:20px;
 }
+,p,a {font-size:1.5em;
 
-h1,p,a {font-size:1.5em;
 
-
+}
+h1{
+	background-color:red,0.7;
+	font-size:2.5em;
+	font-family:Times New Roman;
+	border-style:dotted;
+	text-align:center;
+	border-top:none;
+	border-left:none;
 }
 
 a{
