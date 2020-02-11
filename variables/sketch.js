@@ -1,7 +1,12 @@
+x =200
+
+
+
 function setup () { 
 	createCanvas (640,360);
 
 }
+
 
 function draw () {
 	// SHAPES WITH X,Y coordinates and size
@@ -14,9 +19,12 @@ function draw () {
 
 	//curve(73,24,73,61,15,65,15,65);
 	
+
+
+
 	fill('blue');
 
-	ellipse(300,200,120,170,20);
+	ellipse(x + 100,200,120,170,20);// head
 
 
 	noStroke()
@@ -33,14 +41,18 @@ function draw () {
 	stroke('black');
 	ellipse(260,160,20,20,);//right eye
 	ellipse(310,160,20,20,);//left eye
+	fill('black')
+	//arc(280,210,120,90,180,360,HALF_PI,OPEN)
+	fill('white')
 	ellipse(280,190,40,20,);//nose
 	ellipse(280,220,10,10,);//mouth
 
 	noFill();
 	curve(300, 120, 300 ,110, 300, 80, 415, 65, 400, 215, 165, 156);
 	curve(300, 120, 296 ,110, 300, 80, 415, 65, 400, 215, 165, 156);
-	line(248,150,270,150);//eyebrow
-	line(298,150,330,150);//eyebrow
+	fill('black')
+	rect(248,150,24,5);//eyebrow
+	rect(298,150,24,5);//eyebrow
 
 	line(245,240,242,250); //beard
 	line(249,240,247,255);//beard
