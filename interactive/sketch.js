@@ -1,38 +1,53 @@
-var x = 200
-var y = 100
+
+// global scope
+
+
+// position variables 
+
+
+
+
+var x = 200;
+var y = 100;
+
+
+//  size variables 
+
+var d = 100
+
+var faceColor = 'blue';
 
 
 function setup () { 
 	createCanvas (640,360);
 
+
 }
 
 
 function draw () {
-	// SHAPES WITH X,Y coordinates and size
-	background ('white');
-	//ellipse(260,120,130);//head
-	//arc(226,80,30,22,)
-	//ellipse(226,80,30);//left eye
-	//ellipse(236,100,30);//nose
-	//ellipse()
-
-	//curve(73,24,73,61,15,65,15,65);
 	
+	/*var x = mouseX;
+	var y = mouseY;
+	*/
 
 
+	background ('white');
+	
+	fill(faceColor);
 
-	fill('blue');
-
-	ellipse(x + 100, x ,y + 20,y + 70,20);// head
-
+	ellipse(x+100,x ,y + 20,y + 70,20);// head
+	
 	
 	noStroke()
-	fill('blue')
-	ellipse( x + 140, y + 60,y/2,y/2,);//hair1
-	ellipse( x + 150, y + 70, y/2,y/2);
-	ellipse( x + 154, y + 80,y/2,y/2);
+	fill(faceColor)
+
+	ellipse( x + 140, y + 60,d/2,d/2,);//hair1
+	ellipse( x + 150, y + 70, d/2,d/2);
+	ellipse( x + 154, y + 80,d/2,d/2);
 	ellipse( x + 160, y + 60, 40, 40);
+
+	
 
 	//ellipse(280,196,4,4)
 
@@ -42,7 +57,7 @@ function draw () {
 	ellipse(x + 60, y + 60,y/5,y/5,);//right eye
 	ellipse(x + 110,y + 60,20,20,);//left eye
 	fill('black')
-	//arc(280,210,120,290,PI)
+	//arc(280,210,120,290,QUARTER_PI,QUARTER_PI,OPEN)
 	fill('white')
 	ellipse(x + 80,y + 90,y-60,y-80);//nose
 	ellipse(x + 80,x + 20,10,10,);//mouth
@@ -59,10 +74,18 @@ function draw () {
 	line(x + 51,x + 45,x + 49,x + 59); //beard
 	//arc(300,200,120,10,0,PI,);
 
-	ellipse(x + 66,y + 60,8,8);//right eye
-	ellipse(x + y + 16,y + 60,8,8);
+	var pupilHoriz = map(mouseX,300,640,x+60,x+70) ;
+	var pupilVerti = map(mouseY,60,360,x + 60, x + 68);
+	ellipse(pupilHoriz,pupilVerti-100,8,8);//right pupil 
+	ellipse(pupilHoriz + 50,pupilVerti-100,8,8);// left pupil
 }
 
+	function mouseClicked() {
 
+		faceColor = 'red';
+		
+
+
+	}
 // shapes that are only x,y points 
  
