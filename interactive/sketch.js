@@ -15,7 +15,29 @@ var y = 100;
 
 var d = 100
 
+// color variables
+
 var faceColor = 'blue';
+
+//misc.
+
+var mouth = 
+
+		beginShape();
+		fill('white');
+		stroke('black');
+		strokeWeight(2);	
+	
+		curveVertex	(x/4,y);
+		curveVertex	(x/4,y);
+		curveVertex	(x,y);
+		curveVertex	(x,y+60);
+		curveVertex	(x/4,y + 40);
+		curveVertex	(x/4,y + 5);
+		curveVertex	(x/4, y)
+		endShape('CLOSE');
+
+
 
 
 function setup () { 
@@ -83,9 +105,23 @@ function draw () {
 	function mouseClicked() {
 
 		faceColor = 'red';
+		//fill('green');
+		stroke('black');
+		//bezier(86,170,80,170,160,140,110,250,170,86,250);//newcontour
+		//strokeWeight(4);
+		//point(x + 100,y + 60);
+		//point(x + 140,y + 60);
+		//point(x + 140,y + 100);
+		//point(x + 100,y + 100);
+		mouth 
+
 		
 
+}
 
-	}
+
+
+
+	
 // shapes that are only x,y points 
  
