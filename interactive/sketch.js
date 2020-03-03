@@ -15,6 +15,8 @@ var y = 100;
 
 var d = 100
 
+
+
 // color variables
 
 var faceColor = 'blue';
