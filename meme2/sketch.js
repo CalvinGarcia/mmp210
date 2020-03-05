@@ -4,65 +4,49 @@ Meme 2
 
 */
 
-var hide;
-var harry;
+	var instructions= "Harold hides his feelings. Click the corresponding emotion to see what he really looks like when he's not hiding his feelings."
+	var feelings=" I'm fine. "
+	var counter = 0
+	
 
 
 function preload(){
-
-	hide = loadImage("hide.jpg");
-	harry = loadImage("harry.jpg");
+	hide = loadImage('hide.jpg');
+	harry = loadImage('harry.jpg');
+	happy = loadImage('happy.jpg');
+	angry = loadImage('angry.png');
+	
 }
 
 function setup(){
 	createCanvas(600,600);
 
 }
-function draw(){
 
-	
-	background('white');
-	if (mouseX < width/2) {
-		background('black');
+function mouseIsPressed(){
+		counter++;
+
+		
+
 	}
 
-	if (mouseIsPressed){
-		image(harry,0, 100,600,325);
-		} else { 
-			image(hide,0, 100,600,325);
+function draw(){
+	background('white');
 
-		}
+	image(hide,0,height/4,width,height/2);
+	image(happy,0,0,height/4,width/4);
+	image(angry,450,0,height/4,width/4);
+	textFont('arial');
+	textSize(14);
+	text(instructions, width/3,height/10,200,200);
+
+	if ( counter == 0)
+		image(harry,0,height/4,width,height/2); 
+	} else if ( counter == 1) {
+		image( ) 
 	
-
-	var fort = 'Who\'s up for a fortnite?';
-	var guys = 'Ok cool guys, have fun';
-	
-	fill('white');
-	stroke('black');
-	strokeWeight(4);
-	textFont('impact');
-	textSize(40);
-	textStyle(BOLD);
-	textAlign(CENTER);
-
-	
-	if (mouseIsPressed){
-	text(guys,width/2,480);
-		} else{
-			text(fort,width/2,480);
-
-		}
-	
-	
-
-	var Sam= 'ME TRYING TO RELATE TO MY CLASSMATES'
-
-	textSize(36);
-	strokeWeight(3);
-	text(Sam,width/2,80);
-
-	//ellipse(width/2,height/2,face)
-
-
 }
+
+
+
 
