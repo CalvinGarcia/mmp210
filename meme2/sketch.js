@@ -4,10 +4,15 @@ Meme 2
 
 */
 
-	var instructions= "Harold hides his feelings. Click the corresponding emotion to see what he really looks like when he's not hiding his feelings."
-	var feelings=" I'm fine. "
-	var counter = 0
-	
+//global scope
+
+	var instructions= "Harold hides his feelings. Click the corresponding emotion to see what he really looks like when he's not hiding his feelings.";
+	var feelings=" I'm fine. ";
+	//var counter = 0;
+	var hide;
+	var harry;
+	var happy;
+	var angry;
 
 
 function preload(){
@@ -18,20 +23,21 @@ function preload(){
 	
 }
 
-function setup(){
-	createCanvas(600,600);
+function setup() {
+	 createCanvas(600,600);
+
 
 }
 
-function mouseIsPressed(){
+/*function mouseIsPressed() {
 		counter++;
 
-		
 
 	}
-
-function draw(){
+*/
+function draw() {
 	background('white');
+
 
 	image(hide,0,height/4,width,height/2);
 	image(happy,0,0,height/4,width/4);
@@ -40,13 +46,15 @@ function draw(){
 	textSize(14);
 	text(instructions, width/3,height/10,200,200);
 
-	if ( counter == 0)
+/*
+if (mouseIsPressed) {
+if ( counter == 0) {
 		image(harry,0,height/4,width,height/2); 
-	} else if ( counter == 1) {
-		image( ) 
 	
-}
+	} else ( counter == 1) {
+		image(hide,0,height/4,width,height/2 ); 
+	} 
 
 
-
+*/
 
