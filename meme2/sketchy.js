@@ -49,9 +49,9 @@ function draw(){
 			image(anger,0,height/7,600,400);} 	
 			else if (mouseX < width/2 && mouseY >height/2){
 				image(rage,0,height/7,600,400);}
-				 else (mouseX > width/2 && mouseY > height/2)
+				 /*else (mouseX > width/2 && mouseY > height/2)
 					image(happy,0,height/7,600,400);   
-
+*/
 				
 				}
 
