@@ -30,12 +30,6 @@ function setup(){
 	
 // function mousePressed(){
 
-	
-	
-
-	
-
-
 
 function draw(){
 
@@ -43,19 +37,21 @@ function draw(){
 	
 	image(hide,0,height/7,600,400);
 	if (mouseIsPressed) {
-		if (mouseX < width/2 && mouseY < height/2){
-			image(harry,0,height/7,600,400);}
-		else if (mouseX > width/2 && mouseY < height/2){
-			image(anger,0,height/7,600,400);} 	
-			else if (mouseX < width/2 && mouseY >height/2){
-				image(rage,0,height/7,600,400);}
-				 /*else (mouseX > width/2 && mouseY > height/2)
-					image(happy,0,height/7,600,400);   
-*/
-				
-				}
+		if (mouseX < width/2 && mouseY < height/2) {
+			image(harry,0,height/7,600,400);
+		}
+		else if (mouseX > width/2 && mouseY < height/2) {
+			image(anger,0,height/7,600,400);
+		} 	
+		else if (mouseX < width/2 && mouseY > height/2) {
+			image(rage,0,height/7,600,400);
+		}
+		else if (mouseX > width/2 && mouseY > height/2) {
+			image(happy,0,height/7,600,400);   
+		}
+	}
 
-	text(instructions,width/4,height/18,300,200);
+	text(instructions, width/4, height/18, 300, 200);
 	textFont('Arial');	
 	textSize(14);	
 
