@@ -10,8 +10,11 @@ var hide;
 var harry;
 var rage;
 var anger;
-var instructions = 'harold hides his emotions. Scroll to the corresponding corner to reveal what it looks like with corresponding emojis.';
-
+var instructions = 'Harold hides his feelings. Scroll to one of the corners and click the emoticon to reveal what Harold actually looks like when he\'s feeling one of these emotions.';
+var messageHappy = ' ∩(︶▽︶)∩';
+var messageAnger = ' (  ಠ益ಠ  )';
+var messageFlirty = '(  >‿‿◕ )';
+var messageSerene = '(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧';
 
 //other variables 
 
@@ -51,9 +54,17 @@ function draw(){
 		}
 	}
 
-	text(instructions, width/4, height/18, 300, 200);
 	textFont('Arial');	
-	textSize(14);	
+	textSize(14);
+	text(instructions, width/4, height - 580, 300, 200);
+		
 
+
+	textSize(18);
+	color('black');
+	text(messageHappy, 25,50);
+	text(messageAnger, width - 100, 50);
+	text(messageFlirty, 50 , height - 50 );
+	text(messageSerene, width - 150, height - 50);
 
 }					
