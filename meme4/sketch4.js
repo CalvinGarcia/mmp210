@@ -6,6 +6,7 @@ Meme 4
 
 var calvy  
 var r
+var s
 
 
  function setup(){ 
@@ -24,13 +25,15 @@ var r
 //goal is to zoom in regular and then spin backward 
 
  	translate( width/2, height/2);
+ 	rotate(frameCount * 5, TWO_PI);
+ 	scale(frameCount/20 );
  	
  	
 
  	imageMode(CENTER);
  	image(calvy, 0 , 0, 50, 50);	
  		if (frameCount > 1000) {
- 			scale--;
+ 			scale(framecount %;
 
  		}
 
