@@ -14,16 +14,18 @@ function draw(){
 
 	background('black');
 
-	for ( let x = 50; x <= width; x += 100){
-			fill('blue');
+	for ( let x = 100; x <= width; x += 100){
+		
 			
 
 			fill ('white');
-			rect(x ,50 ,20 ,20);
+			rect(x ,50 ,50 ,50);
+			
 
 			fill ('red');
-			rect(x + 7, 50, 5, 20);
-			rect(x, 57, 20, 5);
+			noStroke();
+			rect(x + 25, 50, 8, 50);
+			rect(x, 70, 50, 8);
 	}
 
 
