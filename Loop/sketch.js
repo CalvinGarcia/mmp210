@@ -24,8 +24,8 @@ function draw(){
 
 			fill ('red');
 			noStroke();
-			rect(x + 25, 50, 8, 50);
-			rect(x, 70, 50, 8);
+			rect(x + 25, 50, 10, 50);
+			rect(x, 70, 50, 10);
 	}
 
 
