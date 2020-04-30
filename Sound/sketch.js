@@ -41,11 +41,13 @@ function draw(){
 	text(wet, x * 4, y * 8);
 	pop();
 
-	function canvasPressed(){
-		matchstrike.play()
+}
+
+	function mousePressed(){
+		matchSound.play()
 
 		}
 		
-	}	
+		
 			
 
