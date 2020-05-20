@@ -1,6 +1,6 @@
 /* 
 
-My final Pitch 
+Final Project 
 
 */
 
@@ -30,7 +30,7 @@ var ynh;
 var payback =" I'll pay you back I promise.";
 var directions = "use that text field that has been ominously hanging underneath the sketch this entire time.";
 var keep = "save this for later with the save button.";
-
+var rules = "gonna need you to hold that E key and hit next so I can jump through.";
 
 
 function preload(){
@@ -93,7 +93,9 @@ function draw(){
 	fill('black');
 	textSize(20);
 	text( " << Prev" , prevButtonX, prevButtonY, prevButtonW, prevButtonH );
-	text( "Next >>" , nextButtonX, nextButtonY, nextButtonW, nextButtonH)
+	text( "Next >>" , nextButtonX, nextButtonY, nextButtonW, nextButtonH);
+
+
 
 // Title text for Slides 
 	if(currentSlide == 0){
@@ -130,6 +132,12 @@ function draw(){
 	}else if ( currentSlide == 8){
 		title = ""; 
 		bodyText = "Hit the E key and the ellipse should appear.";
+		if(keyIsPressed){
+			fill('blue');
+			ellipse(800,260,100);
+			fill('white');
+			text(rules,200, height-50);
+		}
 	}else if ( currentSlide == 9){
 		title = "Climax or Anti Climax?";
 		bodyText = "monster sound plays again place";
@@ -166,19 +174,12 @@ function draw(){
 		text(ynh.value(),500,290);
 
 
-
-	}
-
+		}
 }
 
-function keyPressed(){
-	if(keyCode == 69){
-//		if(currentSlide == 8){
-		fill('white');
-		ellipse(800,200, 100,100);
-		}
-	}
-//
+
+
+
 
 	
 function mousePressed(){
@@ -202,7 +203,7 @@ function mousePressed(){
 	//monster noise cue 
 	if (mouseX > nextButtonX && mouseX < nextButtonX + nextButtonW &&
 		mouseY > nextButtonY && mouseY < nextButtonY + nextButtonH) {
-		if(currentSlide == 5){
+		if(currentSlide == 5 || currentSlide == 9){
 				monster.play(); 
 		}
 
