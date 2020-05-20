@@ -30,7 +30,7 @@ var ynh;
 var payback =" I'll pay you back I promise.";
 var directions = "use that text field that has been ominously hanging underneath the sketch this entire time.";
 var keep = "save this for later with the save button.";
-var rules = "gonna need you to hold that E key and hit GO so I can jump through.";
+var rules = "gonna need you to hold that E key and hit next so I can jump through.";
 
 
 function preload(){
@@ -74,45 +74,33 @@ function draw(){
 	rect(100,100, 600, 300);
 
 // Titles 
-	textFont('impact')
 	textSize(40);
-	fill('white');
-	text(title, width/ 8, height / 7);
+	fill('yellow');
+	text(title, width/ 8, height / 6);
 
 // Body Text
 	textSize(20);
 	fill('black');
-	textFont('arial');
 	text(bodyText, width/7, height/4, 200 );
 
 
 		
-	fill('plum');
+	fill('yellow');
 	rect(nextButtonX, nextButtonY, nextButtonW, nextButtonH);
-
-
-	//rect(prevButtonX, prevButtonY, prevButtonW, prevButtonH);
+	rect(prevButtonX, prevButtonY, prevButtonW, prevButtonH);
 
 	
-	fill('white');
-	stroke('black');
-	textSize(16);
-	textFont('impact');
-	textAlign(CENTER, CENTER);
-	//text( " << Prev" , prevButtonX, prevButtonY, prevButtonW, prevButtonH );
-	text( "  Go >>" , nextButtonX, nextButtonY, nextButtonW, nextButtonH);
+	fill('black');
+	textSize(20);
+	text( " << Prev" , prevButtonX, prevButtonY, prevButtonW, prevButtonH );
+	text( "Next >>" , nextButtonX, nextButtonY, nextButtonW, nextButtonH);
 
-//navigation instruction 
-	
-	textFont('arial');
-	textSize(12);
-	noStroke();
-	textAlign(LEFT);
+
 
 // Title text for Slides 
 	if(currentSlide == 0){
 		title = "Welcome to my final project."; 
-		bodyText = "Please make sure your sound is on.\n \n( just not too loud) \n \n Use the Go key to advance the story. \n \n Enjoy.";
+		bodyText = "Please make sure your sound is on.\n \n( just not too loud) \n \n Have fun.";
 		image(run, width/2, height/5, 300, 300);
 	} else if( currentSlide == 1){
 		title = "";
@@ -132,7 +120,7 @@ function draw(){
 		image(explain, width/2.5, height/5, 300,300);
 	}else if( currentSlide == 5){
 		title = "";
-		bodyText = ""
+		bodyText = " monster sound plays."
 		image(surprise, width/2.5, height/5, 300,300);
 	}else if ( currentSlide == 6){ 
 		title = "Rising Action";
@@ -143,28 +131,27 @@ function draw(){
 		bodyText = "I think we can make this quick by just drawing an ellipse right here. "
 	}else if ( currentSlide == 8){
 		title = ""; 
-		bodyText = "Press and hold the E key and the ellipse should appear.";	
+		bodyText = "Hit the E key and the ellipse should appear.";
 		if(keyIsPressed){
-			fill('white');
+			fill('blue');
 			ellipse(800,260,100);
 			fill('white');
 			text(rules,200, height-50);
 		}
-	
 	}else if ( currentSlide == 9){
 		title = "Climax or Anti Climax?";
 		bodyText = "monster sound plays again place";
 		image( getAway , width/2, height/5, 300, 300 );
 	}else if( currentSlide == 10){
 		title = "The End?"
-		bodyText = " Phew! Thanks for your help,I'm that nasty monster isn't happy about my escape.";
+		bodyText = " Phew! Thanks for your help,";
 		image(phew ,width/2, height/5, 300, 300 );
 	}else if( currentSlide == 11){
 		title = "";
 		bodyText = " So, uh..."; 
 	}else if( currentSlide == 12){
 		title = ""
-		bodyText = " I don't have any cash on me, so I've created an IOU on the next page. \n \n I'll return the favor later"; 
+		bodyText = " I don't have any cash on me, so here's an IOU. \n \n You can save it to your computer and print it out. \n \n I'll return the favor later"; 
 	}else if ( currentSlide == 13){
 		title = "The Calvin Garcia Payback Promise";
 		bodyText = "This IOU void after this semester.";
@@ -181,15 +168,14 @@ function draw(){
 		text(keep,150,340,200);
 		textSize(10);
 		fill('black');
-		stroke('black');
-		line( 500, 310,700, 310);
+
+		line( 500, 300,700, 300);
 		textSize(30);
 		text(ynh.value(),500,290);
 
 
 		}
 }
-
 
 
 
@@ -205,7 +191,7 @@ function mousePressed(){
 		currentSlide++; }
 
 	}
-/*
+
 //prev button 
 	if (mouseX > prevButtonX && mouseX < prevButtonX + prevButtonW &&
 		mouseY > prevButtonY && mouseY < prevButtonY + prevButtonH ){
@@ -213,7 +199,7 @@ function mousePressed(){
 			currentSlide--;
 		}
 }
-*/
+
 	//monster noise cue 
 	if (mouseX > nextButtonX && mouseX < nextButtonX + nextButtonW &&
 		mouseY > nextButtonY && mouseY < nextButtonY + nextButtonH) {
