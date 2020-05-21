@@ -28,10 +28,12 @@ var iou = "IOU from Calvin";
 var name = "Your Name Here";
 var ynh;
 var payback =" I'll pay you back I promise.";
-var directions = "use that text field that has been ominously hanging underneath the sketch this entire time.";
+var directions = "use that text field that has been ominously hanging underneath the sketch this entire time to fill in your name.";
 var keep = "save this for later with the save button.";
 var rules = "gonna need you to hold that E key and hit GO so I can jump through.";
-
+var cover;
+var point;
+var broke;
 
 function preload(){
 
@@ -44,6 +46,9 @@ function preload(){
 	surprise = loadImage("surprise.jpg");
 	thoughtful = loadImage("thoughtful.jpg");
 	getAway = loadImage("escape.jpg");
+	cover = loadImage("cover.jpg");
+	point = loadImage("point.jpg");
+	broke = loadImage("broke.jpg");
 
 }
 
@@ -113,7 +118,7 @@ function draw(){
 	if(currentSlide == 0){
 		title = "Welcome to my final project."; 
 		bodyText = "Please make sure your sound is on.\n \n( just not too loud) \n \n Use the Go key to advance the story. \n \n Enjoy.";
-		image(run, width/2, height/5, 300, 300);
+		image(cover, width/2, height/5, 300, 300);
 	} else if( currentSlide == 1){
 		title = "";
 		bodyText = "Huff. Huff.";
@@ -141,30 +146,34 @@ function draw(){
 	}else if( currentSlide == 7){
 		title = "";
 		bodyText = "I think we can make this quick by just drawing an ellipse right here. "
+		image(idea, width/2.5, height/5, 300,300);
 	}else if ( currentSlide == 8){
 		title = ""; 
 		bodyText = "Press and hold the E key and the ellipse should appear.";	
+		image(point, width/2.5, height/5, 300,300);
 		if(keyIsPressed){
 			fill('white');
-			ellipse(800,260,100);
+			ellipse(800,260,160);
 			fill('white');
 			text(rules,200, height-50);
 		}
 	
 	}else if ( currentSlide == 9){
 		title = "Climax or Anti Climax?";
-		bodyText = "monster sound plays again place";
+		bodyText = "";
 		image( getAway , width/2, height/5, 300, 300 );
 	}else if( currentSlide == 10){
 		title = "The End?"
-		bodyText = " Phew! Thanks for your help,I'm that nasty monster isn't happy about my escape.";
+		bodyText = " Phew! Thanks for your help,I'm sure that nasty monster isn't happy about my escape.";
 		image(phew ,width/2, height/5, 300, 300 );
 	}else if( currentSlide == 11){
 		title = "";
-		bodyText = " So, uh..."; 
+		bodyText = " So, uh...";
+		image(thoughtful ,width/2, height/5, 300, 300 ); 
 	}else if( currentSlide == 12){
 		title = ""
 		bodyText = " I don't have any cash on me, so I've created an IOU on the next page. \n \n I'll return the favor later"; 
+		image( broke , width/2, height/5, 300, 300 );
 	}else if ( currentSlide == 13){
 		title = "The Calvin Garcia Payback Promise";
 		bodyText = "This IOU void after this semester.";
