@@ -52,6 +52,8 @@ function preload(){
 
 }
 
+///fffff
+
 function setup(){
 
 	createCanvas(960, 500);
